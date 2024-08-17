@@ -1,0 +1,12 @@
+def is_disarium(num,dul,ndig,sol=0):
+    while num!=0:
+        ld=num%10
+        sol=sol+(ld)**ndig
+        ndig=ndig-1
+        num=num//10
+    return dul==sol
+num=int(input("Enter a number:"))
+if is_disarium(num,num,len(str(num))):
+    print("Disarium Number")
+else:
+    print("NotDisarium Number")
