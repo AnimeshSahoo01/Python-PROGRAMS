@@ -1,0 +1,11 @@
+def is_armstrong(num,dul,ndig,sol=0):
+    while num!=0:
+        ld=num%10
+        sol=sol+(ld)**ndig
+        num=num//10
+    return dul==sol
+num=int(input("Enter a number:"))
+if is_armstrong(num,num,len(str(num))):
+    print("Armstrong number")
+else:
+    print("Not armstrong number")
