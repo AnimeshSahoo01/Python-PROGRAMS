@@ -1,0 +1,14 @@
+def fact(num,mul=1):
+    for fa in range(1,num+1):
+        mul=mul*fa
+    return mul
+def is_digit(num,copy,dsum=0):
+    while num!=0:
+        ld=num%10
+        dsum=dsum+fact(ld)
+        num=num//10
+    return copy==dsum
+def special(num):
+    return is_digit(num,num)
+num=int(input("Enter a number:"))
+print("special number" if special(num) else "not special")
