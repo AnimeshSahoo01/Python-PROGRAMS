@@ -1,0 +1,6 @@
+def is_fact(num):
+    factorial=1
+    for num in range(1,num+1):
+        factorial=factorial*num
+    return factorial
+print(is_fact(int(input("Enter a number:"))))
