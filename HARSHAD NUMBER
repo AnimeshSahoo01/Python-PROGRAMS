@@ -1,0 +1,12 @@
+def is_harshad(num,copy,dsum=0):
+    while num!=0:
+        ld=num%10
+        dsum=dsum+ld
+        num=num//10
+    if copy%dsum==0:
+        return"Harshad"
+    else:
+        return"Not harshad"
+num=int(input("Enter a number:"))
+copy=num
+print(is_harshad(num,num))
