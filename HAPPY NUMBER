@@ -1,0 +1,12 @@
+def square(num,dsum=0):
+    while num!=0:
+        ld=num%10
+        dsum=dsum+(ld)**2
+        num=num//10
+    return dsum
+def is_happy(num):
+    while num>9:
+        num=square(num)
+    return num==1 or num==7
+num=int(input("enter a number:"))
+print("Happy number" if is_happy(num) else "Not happy number")
