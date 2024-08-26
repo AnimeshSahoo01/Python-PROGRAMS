@@ -1,0 +1,11 @@
+def is_pronic(num,n):
+    while n*(n+1)<=num:
+        if n*(n+1)==num:
+            return "Pronic"
+            break
+        n=n+1
+    else:
+        return"Not pronic"
+num=int(input("Enter a number:"))
+n=0
+print(is_pronic(num,n))
