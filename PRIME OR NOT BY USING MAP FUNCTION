@@ -1,0 +1,8 @@
+WAP TO CHECK THE NUMBER IS PRIME OR NOT BY USING MAP FUNCTION IN A GIVEN RANG
+def prime(num):
+    for fa in range(2,num//2+1):
+        if num%fa==0:
+            return False
+    return True
+for val in map(prime,range(10,50)):
+              print(val)
