@@ -1,0 +1,11 @@
+def is_sunny(num,n):
+    while n*n<=num+1:
+        if n*n==num+1:
+            return"sunny number"
+            break
+        n=n+1
+    else:
+     return"not sunny number"
+num=int(input("Enter a number:"))
+n=0
+print(is_sunny(num,n))
