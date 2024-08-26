@@ -1,0 +1,17 @@
+def prime(num):
+    for fa in range(2,num//2+1):
+        if num%fa==0:
+            return False
+    return True
+def Rev(num,sol=0):
+    while num!=0:
+        ld=num%10
+        sol=sol*10+ld
+        num=num//10
+    return sol
+num=int(input("enter a number:"))
+revnum=Rev(num)
+if (num!=revnum) and prime(num) and prime(revnum):
+    print("Emirp number")
+else:
+    print("Not emirp number")
